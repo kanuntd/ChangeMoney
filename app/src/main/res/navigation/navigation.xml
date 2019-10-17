@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/indexFragment">
+
+    <fragment
+        android:id="@+id/indexFragment"
+        android:name="buu.informatics.s59161081.changmoney.IndexFragment"
+        android:label="IndexFragment"
+        tools:layout="@layout/fragment_index" >
+        <action
+            android:id="@+id/action_indexFragment_to_compareFragment"
+            app:destination="@+id/compareFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/compareFragment"
+        android:name="buu.informatics.s59161081.changmoney.CompareFragment"
+        android:label="CompareFragment"
+        tools:layout="@layout/fragment_compare" >
+        <action
+            android:id="@+id/action_compareFragment_to_converterFragment"
+            app:destination="@id/converterFragment" />
+        <action
+            android:id="@+id/action_compareFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/converterFragment"
+        android:name="buu.informatics.s59161081.changmoney.ConverterFragment"
+        android:label="ConverterFragment"
+        tools:layout="@layout/fragment_converter" >
+        <action
+            android:id="@+id/action_converterFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment" />
+        <action
+            android:id="@+id/action_converterFragment_to_compareFragment"
+            app:destination="@id/compareFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="buu.informatics.s59161081.changmoney.FavoriteFragment"
+        android:label="FavoriteFragment"
+        tools:layout="@layout/fragment_favorite">
+        <action
+            android:id="@+id/action_favoriteFragment_to_converterFragment"
+            app:destination="@id/converterFragment" />
+        <action
+            android:id="@+id/action_favoriteFragment_to_compareFragment"
+            app:destination="@id/compareFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">CHANG MONEY</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="appName">CHANGE MONEY</string>
+    <string name="converter">ⓢ \n
+        Converter</string>
+    <string name="compare">% \n Compare</string>
+    <string name="favorite">♡ \n Favorite</string>
+    <string name="thb">THB</string>
+    <string name="usd">USD</string>
+    <string name="youPaid">You paid</string>
+    <string name="youRe">You received</string>
+    <string name="symB">฿</string>
+    <string name="symU">$</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
