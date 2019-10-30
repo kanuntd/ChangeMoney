@@ -1,11 +1,10 @@
 package buu.informatics.s59161081.changmoney
 
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
@@ -26,8 +25,10 @@ class ConverterFragment : Fragment() {
         binding.favoriteButton.setOnClickListener { view : View ->
             view.findNavController().navigate(R.id.action_converterFragment_to_favoriteFragment)
         }
+        setHasOptionsMenu(true)
         return binding.root
     }
+
 
 
 }

@@ -35,8 +35,6 @@ class IndexFragment : Fragment() {
         }.start()
 
 
-
-
         return binding.root
     }
 

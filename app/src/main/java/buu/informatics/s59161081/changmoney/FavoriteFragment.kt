@@ -7,17 +7,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.ListView
 import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import buu.informatics.s59161081.changmoney.databinding.FragmentFavoriteBinding
+import kotlinx.android.synthetic.main.fragment_favorite.*
 
 /**
  * A simple [Fragment] subclass.
  */
 class FavoriteFragment : Fragment() {
 
-    var array = arrayOf("1","2","3","4")
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val binding = DataBindingUtil.inflate<FragmentFavoriteBinding>(inflater,
@@ -28,8 +30,13 @@ class FavoriteFragment : Fragment() {
         binding.converterButton.setOnClickListener { view : View ->
             view.findNavController().navigate(R.id.action_favoriteFragment_to_converterFragment)
         }
-        var adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,array)
-        binding.listView.adapter = adapter
+
+//        var array = ArrayList<Currency>()
+//        array.add(Currency("Thai"))
+//
+//        var adapte = ItemAdapter(context,array)
+//        binding?.listView?.adapter = adapte
+
         return binding.root
     }
 

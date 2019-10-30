@@ -13,6 +13,8 @@
     <string name="youRe">You received</string>
     <string name="symB">฿</string>
     <string name="symU">$</string>
+    <string name="adminName">Natthanan Kongkunlaya</string>
+    <string name="about">about</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
