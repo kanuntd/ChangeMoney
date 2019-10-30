@@ -1,8 +1,10 @@
 package buu.informatics.s59161081.changmoney
 
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import android.widget.ShareActionProvider
 import androidx.fragment.app.Fragment
@@ -30,6 +32,7 @@ class CompareFragment : Fragment() {
         }
 
         setHasOptionsMenu(true)
+        Log.i("CompareFragment", "onCreateView called")
         return binding.root
     }
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -59,6 +62,39 @@ class CompareFragment : Fragment() {
     }
     private fun shareSuccess() {
         startActivity(getShareIntent())
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        Log.i("CompareFragment", "onCreate called")
+    }
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        Log.i("CompareFragment", "onActivityCreated called")
+    }
+    override fun onStart() {
+        super.onStart()
+        Log.i("CompareFragment", "onStart called")
+    }
+    override fun onResume() {
+        super.onResume()
+        Log.i("CompareFragment", "onResume called")
+    }
+    override fun onPause() {
+        super.onPause()
+        Log.i("CompareFragment", "onPause called")
+    }
+    override fun onStop() {
+        super.onStop()
+        Log.i("CompareFragment", "onStop called")
+    }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        Log.i("CompareFragment", "onDestroyView called")
+    }
+    override fun onDetach() {
+        super.onDetach()
+        Log.i("CompareFragment", "onDetach called")
     }
 
 }

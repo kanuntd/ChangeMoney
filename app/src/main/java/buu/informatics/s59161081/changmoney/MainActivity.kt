@@ -2,6 +2,7 @@ package buu.informatics.s59161081.changmoney
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Window
 import android.view.WindowManager
 import androidx.navigation.findNavController
