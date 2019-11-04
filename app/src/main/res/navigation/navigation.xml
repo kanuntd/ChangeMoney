@@ -41,7 +41,7 @@
     </fragment>
     <fragment
         android:id="@+id/favoriteFragment"
-        android:name="buu.informatics.s59161081.changmoney.FavoriteFragment"
+        android:name="buu.informatics.s59161081.changmoney.Favorite.FavoriteFragment"
         android:label="FavoriteFragment"
         tools:layout="@layout/fragment_favorite">
         <action

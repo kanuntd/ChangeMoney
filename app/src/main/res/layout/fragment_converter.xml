@@ -72,13 +72,56 @@
             app:srcCompat="@drawable/thai" />
 
         <TextView
-            android:id="@+id/shortnessText"
+            android:id="@+id/shortnessThai"
+            android:layout_width="96dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/comicbd"
+            android:text="@string/thb"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/imageThai"
+            app:layout_constraintTop_toTopOf="@+id/imageThai" />
+
+        <TextView
+            android:id="@+id/nameThai"
+            android:layout_width="97dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/comicbd"
+            android:text="@string/thai"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/shortnessThai"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/shortnessThai"
+            app:layout_constraintTop_toBottomOf="@+id/shortnessThai" />
+
+        <EditText
+            android:id="@+id/inputValue"
+            android:layout_width="95dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="32dp"
+            android:ems="10"
+            android:fontFamily="@font/comicbd"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            tools:layout_editor_absoluteX="146dp"
-            tools:layout_editor_absoluteY="28dp" />
-
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="100dp"
+            android:fontFamily="@font/comicbd"
+            android:text="@string/symB"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/inputValue"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

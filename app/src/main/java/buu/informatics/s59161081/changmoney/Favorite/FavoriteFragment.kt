@@ -1,4 +1,4 @@
-package buu.informatics.s59161081.changmoney
+package buu.informatics.s59161081.changmoney.Favorite
 
 
 import android.os.Bundle
@@ -6,13 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.ListView
-import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import buu.informatics.s59161081.changmoney.Converter.CurrencyAdapter
+import buu.informatics.s59161081.changmoney.R
 import buu.informatics.s59161081.changmoney.databinding.FragmentFavoriteBinding
-import kotlinx.android.synthetic.main.fragment_favorite.*
 
 /**
  * A simple [Fragment] subclass.
@@ -31,11 +29,8 @@ class FavoriteFragment : Fragment() {
             view.findNavController().navigate(R.id.action_favoriteFragment_to_converterFragment)
         }
 
-//        var array = ArrayList<Currency>()
-//        array.add(Currency("Thai"))
-//
-//        var adapte = ItemAdapter(context,array)
-//        binding?.listView?.adapter = adapte
+        val adapter = CurrencyAdapter()
+        binding.favoriteList.adapter = adapter
 
         return binding.root
     }

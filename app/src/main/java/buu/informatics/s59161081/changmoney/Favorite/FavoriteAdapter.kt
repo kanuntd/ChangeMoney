@@ -1,4 +1,4 @@
-package buu.informatics.s59161081.changmoney.Converter
+package buu.informatics.s59161081.changmoney.Favorite
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,26 +9,22 @@ import androidx.recyclerview.widget.RecyclerView
 import buu.informatics.s59161081.changmoney.R
 import buu.informatics.s59161081.changmoney.database.Currency
 
-class CurrencyAdapter: RecyclerView.Adapter<CurrencyAdapter.ViewHolder>() {
-    var input : Int = 0
-    var usa : Currency = Currency("USD","US Dollar","1USD=30.3313")
-    var eur : Currency = Currency("EUR","Euro","1EUR=33.3136")
-    var cad : Currency = Currency("CAD","Canadian Dollar","1CAD=22.7928")
+class FavoriteAdapter: RecyclerView.Adapter<FavoriteAdapter.ViewHolder>() {
+    var usa : Currency = Currency("USD","US Dollar")
+    var eur : Currency = Currency("EUR","Euro")
+    var cad : Currency = Currency("CAD","Canadian Dollar")
 
 
     class ViewHolder private constructor(itemView: View) : RecyclerView.ViewHolder(itemView){
         val itemName: TextView = itemView.findViewById(R.id.shortnessText)
         val itemShort: TextView = itemView.findViewById(R.id.nameText)
         val itemImage: ImageView = itemView.findViewById(R.id.imageView)
-        val itemSym: TextView = itemView.findViewById((R.id.symbolText))
-        val itemResult: TextView = itemView.findViewById((R.id.resultText))
-        val itemChange: TextView = itemView.findViewById((R.id.changText))
 
         companion object {
             fun from(parent: ViewGroup): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val view = layoutInflater
-                    .inflate(R.layout.currencylayout, parent, false)
+                    .inflate(R.layout.favoritelayout, parent, false)
                 return ViewHolder(view)
             }
         }
@@ -48,27 +44,16 @@ class CurrencyAdapter: RecyclerView.Adapter<CurrencyAdapter.ViewHolder>() {
     fun ViewHolder.bind(item: Currency) {
         itemName.text = item.nameCu
         itemShort.text = item.shortness
-        itemChange.text = item.chang
-        if(item.shortness == "USD"){
-            val rs = String.format("%.4f",input/30.3313).toDouble()
+        if(item.shortness == "THB" ){
+            itemImage.setImageResource(R.drawable.thai)
+        }else if(item.shortness == "USD"){
             itemImage.setImageResource(R.drawable.usa)
-            itemSym.setText(R.string.symU)
-            itemResult.setText("$rs")
         }else if(item.shortness == "EUR"){
-            val rs = String.format("%.4f",input/33.3136).toDouble()
             itemImage.setImageResource(R.drawable.eur)
-            itemSym.setText(R.string.symE)
-            itemResult.setText("$rs")
         }else{
-            val rs = String.format("%.4f",input/22.7928).toDouble()
             itemImage.setImageResource(R.drawable.canada)
-            itemSym.setText(R.string.symU)
-            itemResult.setText("$rs")
         }
 
-    }
-    fun sendValue(send : Int){
-        input = send
     }
 
     var data =  listOf(usa,eur,cad)

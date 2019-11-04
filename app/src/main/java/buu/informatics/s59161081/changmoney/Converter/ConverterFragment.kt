@@ -3,11 +3,14 @@ package buu.informatics.s59161081.changmoney.Converter
 
 import android.os.Bundle
 import android.view.*
+import android.view.inputmethod.EditorInfo
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import buu.informatics.s59161081.changmoney.R
 import buu.informatics.s59161081.changmoney.databinding.FragmentConverterBinding
+import kotlinx.android.synthetic.main.fragment_converter.*
 
 /**
  * A simple [Fragment] subclass.
@@ -27,6 +30,15 @@ class ConverterFragment : Fragment() {
         setHasOptionsMenu(true)
         val adapter = CurrencyAdapter()
         binding.currencyList.adapter = adapter
+
+        inputValue.setOnEditorActionListener { v, actionId, event ->
+            if(actionId == EditorInfo.IME_ACTION_DONE){
+                adapter.sendValue(inputValue.text.toString().toInt())
+                true
+            } else {
+                false
+            }
+        }
         return binding.root
     }
 
