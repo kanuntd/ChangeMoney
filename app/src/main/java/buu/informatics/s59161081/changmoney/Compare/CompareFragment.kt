@@ -1,18 +1,15 @@
-package buu.informatics.s59161081.changmoney
+package buu.informatics.s59161081.changmoney.Compare
 
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.*
-import android.widget.ShareActionProvider
 import androidx.fragment.app.Fragment
-import android.widget.TextView
-import android.widget.Toolbar
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
+import buu.informatics.s59161081.changmoney.R
 import buu.informatics.s59161081.changmoney.databinding.FragmentCompareBinding
 
 /**
@@ -37,19 +34,19 @@ class CompareFragment : Fragment() {
     }
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
-        inflater?.inflate(R.menu.options_menu, menu)
+        inflater.inflate(R.menu.options_menu, menu)
         if (null == getShareIntent().resolveActivity(activity!!.packageManager)) {
             // hide the menu item if it doesn't resolve
-            menu?.findItem(R.id.share)?.setVisible(false)
+            menu.findItem(R.id.share)?.setVisible(false)
         }
 
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item!!.itemId) {
+        when (item.itemId) {
             R.id.share -> shareSuccess()
         }
-        return NavigationUI.onNavDestinationSelected(item!!,
+        return NavigationUI.onNavDestinationSelected(item,
             view!!.findNavController())
                 || super.onOptionsItemSelected(item)
     }

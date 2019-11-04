@@ -3,13 +3,10 @@ package buu.informatics.s59161081.changmoney
 import android.os.CountDownTimer
 import android.text.format.DateUtils
 import android.util.Log
-import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
-import androidx.navigation.Navigation.findNavController
-import androidx.navigation.fragment.findNavController
 
 class IndexViewModel : ViewModel() {
     private val timer: CountDownTimer
@@ -25,14 +22,18 @@ class IndexViewModel : ViewModel() {
     }
     init {
         Log.i("IndexViewModel", "IndexViewModel created!")
-        timer = object : CountDownTimer(COUNTDOWN_TIME, ONE_SECOND) {
+        timer = object : CountDownTimer(
+            COUNTDOWN_TIME,
+            ONE_SECOND
+        ) {
 
             override fun onTick(millisUntilFinished: Long) {
-                _currentTime.value = millisUntilFinished/ONE_SECOND
+                _currentTime.value = millisUntilFinished/ ONE_SECOND
             }
 
             override fun onFinish() {
-                _currentTime.value = DONE
+                _currentTime.value =
+                    DONE
                 onGameFinish()
 
             }

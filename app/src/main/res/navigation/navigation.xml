@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/compareFragment"
-        android:name="buu.informatics.s59161081.changmoney.CompareFragment"
+        android:name="buu.informatics.s59161081.changmoney.Compare.CompareFragment"
         android:label="CompareFragment"
         tools:layout="@layout/fragment_compare" >
         <action
@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/converterFragment"
-        android:name="buu.informatics.s59161081.changmoney.ConverterFragment"
+        android:name="buu.informatics.s59161081.changmoney.Converter.ConverterFragment"
         android:label="ConverterFragment"
         tools:layout="@layout/fragment_converter" >
         <action

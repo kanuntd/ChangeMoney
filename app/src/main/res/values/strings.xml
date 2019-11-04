@@ -9,6 +9,9 @@
     <string name="favorite">♡ \n Favorite</string>
     <string name="thb">THB</string>
     <string name="usd">USD</string>
+    <string name="cad">CAD</string>
+    <string name="canadian">Canadian \nDollar</string>
+    <string name="thai">Thai Baht</string>
     <string name="youPaid">You paid</string>
     <string name="youRe">You received</string>
     <string name="symB">฿</string>

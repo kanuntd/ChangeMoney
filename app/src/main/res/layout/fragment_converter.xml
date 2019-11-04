@@ -2,50 +2,83 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/compareButton"
-        android:layout_width="134dp"
-        android:layout_height="83dp"
-        android:background="@color/colorYellow"
-        android:fontFamily="@font/comicbd"
-        android:text="@string/compare"
-        android:textAlignment="center"
-        android:textColor="@android:color/background_light"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/favoriteButton"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/converterButton" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/favoriteButton"
-        android:layout_width="134dp"
-        android:layout_height="83dp"
-        android:background="@color/colorYellow"
-        android:fontFamily="@font/comicbd"
-        android:text="@string/favorite"
-        android:textColor="@android:color/background_light"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/compareButton" />
 
-    <Button
-        android:id="@+id/converterButton"
-        android:layout_width="134dp"
-        android:layout_height="83dp"
-        android:background="@color/colorYellow"
-        android:fontFamily="@font/comicbd"
-        android:text="@string/converter"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/compareButton"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/currencyList"
+            android:layout_width="359dp"
+            android:layout_height="491dp"
+            android:layout_marginBottom="16dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/compareButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintVertical_bias="1.0" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/compareButton"
+            android:layout_width="134dp"
+            android:layout_height="83dp"
+            android:background="@color/colorYellow"
+            android:fontFamily="@font/comicbd"
+            android:text="@string/compare"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/favoriteButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/converterButton" />
+
+        <Button
+            android:id="@+id/favoriteButton"
+            android:layout_width="134dp"
+            android:layout_height="83dp"
+            android:background="@color/colorYellow"
+            android:fontFamily="@font/comicbd"
+            android:text="@string/favorite"
+            android:textColor="@android:color/background_light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/compareButton" />
+
+        <Button
+            android:id="@+id/converterButton"
+            android:layout_width="134dp"
+            android:layout_height="83dp"
+            android:background="@color/colorYellow"
+            android:fontFamily="@font/comicbd"
+            android:text="@string/converter"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/compareButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageThai"
+            android:layout_width="87dp"
+            android:layout_height="94dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/thai" />
+
+        <TextView
+            android:id="@+id/shortnessText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="146dp"
+            tools:layout_editor_absoluteY="28dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

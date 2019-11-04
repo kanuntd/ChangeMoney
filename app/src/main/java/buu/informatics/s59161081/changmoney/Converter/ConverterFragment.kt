@@ -1,13 +1,12 @@
-package buu.informatics.s59161081.changmoney
+package buu.informatics.s59161081.changmoney.Converter
 
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
-import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import buu.informatics.s59161081.changmoney.R
 import buu.informatics.s59161081.changmoney.databinding.FragmentConverterBinding
 
 /**
@@ -26,6 +25,8 @@ class ConverterFragment : Fragment() {
             view.findNavController().navigate(R.id.action_converterFragment_to_favoriteFragment)
         }
         setHasOptionsMenu(true)
+        val adapter = CurrencyAdapter()
+        binding.currencyList.adapter = adapter
         return binding.root
     }
 
