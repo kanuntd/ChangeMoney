@@ -2,9 +2,9 @@ package buu.informatics.s59161081.changmoney.Converter
 
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.*
-import android.view.inputmethod.EditorInfo
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
@@ -30,16 +30,25 @@ class ConverterFragment : Fragment() {
         setHasOptionsMenu(true)
         val adapter = CurrencyAdapter()
         binding.currencyList.adapter = adapter
+        binding.inputValue.addTextChangedListener(object : TextWatcher {
 
-        inputValue.setOnEditorActionListener { v, actionId, event ->
-            if(actionId == EditorInfo.IME_ACTION_DONE){
-                adapter.sendValue(inputValue.text.toString().toInt())
-                true
-            } else {
-                false
+            override fun afterTextChanged(s: Editable) {}
+
+            override fun beforeTextChanged(s: CharSequence, start: Int,
+                                           count: Int, after: Int) {
             }
-        }
-        return binding.root
+            override fun onTextChanged(s: CharSequence, start: Int,
+                                       before: Int, count: Int) {
+                if(inputValue.text.toString() == "" || inputValue.text.toString()== null){
+                    adapter.sendValue(0)
+                }else{
+                    adapter.sendValue(inputValue.text.toString().toInt())
+                }
+                binding.currencyList.adapter = adapter
+            }
+        })
+
+            return binding.root
     }
 
 
