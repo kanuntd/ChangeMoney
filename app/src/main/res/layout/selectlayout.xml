@@ -1,11 +1,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/idSelect"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/shortnessFav"
+        android:id="@+id/shortnessSelect"
         android:layout_width="96dp"
         android:layout_height="25dp"
         android:layout_marginStart="12dp"
@@ -13,13 +14,13 @@
         android:textColor="@android:color/background_dark"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageFav"
+        app:layout_constraintStart_toEndOf="@+id/imageSelect"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.218"
         tools:text="CAD" />
 
     <ImageView
-        android:id="@+id/imageFav"
+        android:id="@+id/imageSelect"
         android:layout_width="87dp"
         android:layout_height="94dp"
         android:layout_marginStart="16dp"
@@ -32,7 +33,7 @@
         tools:srcCompat="@drawable/thai" />
 
     <TextView
-        android:id="@+id/nameFav"
+        android:id="@+id/nameSelect"
         android:layout_width="97dp"
         android:layout_height="57dp"
         android:layout_marginTop="8dp"
@@ -42,9 +43,7 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/shortnessFav"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/shortnessFav"
-        app:layout_constraintTop_toBottomOf="@+id/shortnessFav"
+        app:layout_constraintStart_toStartOf="@+id/shortnessSelect"
+        app:layout_constraintTop_toBottomOf="@+id/shortnessSelect"
         tools:text="@string/canadian" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

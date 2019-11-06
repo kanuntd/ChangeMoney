@@ -29,7 +29,7 @@ class FavoriteFragment : Fragment() {
             view.findNavController().navigate(R.id.action_favoriteFragment_to_converterFragment)
         }
 
-        val adapter = CurrencyAdapter()
+        val adapter = FavoriteAdapter()
         binding.favoriteList.adapter = adapter
 
         return binding.root
