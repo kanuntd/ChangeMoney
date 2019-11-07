@@ -18,6 +18,7 @@ import buu.informatics.s59161081.changmoney.databinding.FragmentCompareBinding
 import buu.informatics.s59161081.changmoney.databinding.FragmentIndexBinding
 import kotlinx.android.synthetic.main.fragment_compare.*
 import kotlinx.android.synthetic.main.fragment_converter.*
+import kotlinx.android.synthetic.main.fragment_favorite.*
 
 /**
  * A simple [Fragment] subclass.
@@ -41,6 +42,7 @@ class CompareFragment : Fragment() {
         binding.imageChang2.setOnClickListener {view: View ->
             view.findNavController().navigate(CompareFragmentDirections.actionCompareFragmentToSelectFragment(binding.shrotnessCom.text.toString()))
         }
+
         binding.paidEditText.addTextChangedListener(object : TextWatcher {
 
             override fun afterTextChanged(s: Editable) {}
@@ -65,6 +67,7 @@ class CompareFragment : Fragment() {
                 imageChang2.setImageResource(R.drawable.canada)
                 shrotnessCom.setText(R.string.cad)
                 symRe.setText(R.string.symU)
+
             }
         }else if(args.selectCurrency == "USD") {
             binding.apply {

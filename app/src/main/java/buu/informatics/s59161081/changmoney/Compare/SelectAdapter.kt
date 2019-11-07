@@ -49,11 +49,11 @@ class SelectAdapter(f : Fragment) : RecyclerView.Adapter<SelectAdapter.ViewHolde
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = data[position]
-        holder.bind(item,fragment)
+        holder.bind(item)
     }
 
 
-    fun ViewHolder.bind(item: Currency,f : Fragment) {
+    fun ViewHolder.bind(item: Currency) {
         itemName.text = item.nameCu
         itemShort.text = item.shortness
         if (item.shortness == "USD") {

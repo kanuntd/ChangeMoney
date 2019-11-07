@@ -48,7 +48,6 @@ class FavoriteAdapter: RecyclerView.Adapter<FavoriteAdapter.ViewHolder>() {
            itemImage.setImageResource(R.drawable.eur)
 
        }else{
-
            itemImage.setImageResource(R.drawable.canada)
 
        }
@@ -62,3 +61,4 @@ class FavoriteAdapter: RecyclerView.Adapter<FavoriteAdapter.ViewHolder>() {
 
 
 }
+
