@@ -17,29 +17,19 @@
 package buu.informatics.s59161081.changmoney.database
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.Query
-import androidx.room.Update
+import androidx.room.*
 
 @Dao
-interface FavoriteDatabaseDao {
+interface FavoriteDao {
 
-    @Insert
-    fun insert(favorite: Favorite)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun insert(favorite: Favorite)
 
     @Update
     fun update(favorite: Favorite)
 
-    @Query("SELECT * from favoriteTable WHERE favoriteId = :key")
-    fun get(key: Long): Favorite?
+    @Query("SELECT * from favoriteTable WHERE favoriteNum > 0 ORDER BY favoriteNum ASC")
+    fun getAlphabetized(): LiveData<List<Favorite>>
 
-    @Query("DELETE FROM favoriteTable")
-    fun clear()
 
-    @Query("SELECT * FROM favoriteTable ORDER BY favoriteId DESC LIMIT 1")
-    fun getTonight(): Favorite?
-
-    @Query("SELECT * FROM favoriteTable WHERE favoriteNum > 0 ORDER BY favoriteNum ASC")
-    fun getAllFavorite(): LiveData<List<Favorite>>
 }

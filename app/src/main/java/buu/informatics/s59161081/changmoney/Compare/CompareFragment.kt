@@ -59,21 +59,21 @@ class CompareFragment : Fragment() {
         if(args.selectCurrency == "EUR"){
             binding.apply {
                 imageChang2.setImageResource(R.drawable.eur)
-                shrotnessCom.text = R.string.eur.toString()
-                symRe.text = R.string.symE.toString()
+                shrotnessCom.setText(R.string.eur)
+                symRe.setText(R.string.symE)
             }
         }else if(args.selectCurrency == "CAD"){
             binding.apply {
                 imageChang2.setImageResource(R.drawable.canada)
-                shrotnessCom.text = R.string.cad.toString()
-                symRe.text = R.string.symU.toString()
+                shrotnessCom.setText(R.string.cad)
+                symRe.setText(R.string.symU)
 
             }
         }else if(args.selectCurrency == "USD") {
             binding.apply {
                 imageChang2.setImageResource(R.drawable.usa)
-                shrotnessCom.text = R.string.usd.toString()
-                symRe.text = R.string.symU.toString()
+                shrotnessCom.setText(R.string.usd)
+                symRe.setText(R.string.symU)
             }
         }
 
@@ -103,15 +103,15 @@ class CompareFragment : Fragment() {
             if(shrotnessCom.text.toString() == "USD"){
                 val rs =   String.format("%.4f",input.toInt()*resultCurrency.usd).toDouble()
                 receivedText.text = rs.toString()
-                symRe.text = R.string.symU.toString()
+                symRe.setText(R.string.symU)
             }else if(shrotnessCom.text.toString() == "EUR"){
                 val rs =   String.format("%.4f",input.toInt()*resultCurrency.eur).toDouble()
                 receivedText.text = rs.toString()
-                symRe.text = R.string.symE.toString()
+                symRe.setText(R.string.symE)
             }else if(shrotnessCom.text.toString() == "CAD"){
                 val rs =   String.format("%.4f",input.toInt()*resultCurrency.cad).toDouble()
                 receivedText.text = rs.toString()
-                symRe.text = R.string.symU.toString()
+                symRe.setText(R.string.symU)
             }
         }
 
