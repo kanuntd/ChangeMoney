@@ -7,8 +7,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "favoriteTable")
 data class Favorite(
 
-    @PrimaryKey(autoGenerate = true) var favoriteId : Long = 0L,
-    @ColumnInfo(name = "favoriteShortness")var favoriteShortness: String?,
-    @ColumnInfo(name = "favoriteName") var favoriteName: String?,
+    @PrimaryKey @ColumnInfo(name = "favoriteShortness") val favoriteShortness: String,
+    @ColumnInfo(name = "favoriteName") var favoriteName: String,
     @ColumnInfo(name = "favoriteNum")var favoriteNum: Int = -1) {
 }

@@ -37,7 +37,9 @@ interface FavoriteDatabaseDao {
     @Query("DELETE FROM favoriteTable")
     fun clear()
 
+    @Query("SELECT * FROM favoriteTable ORDER BY favoriteId DESC LIMIT 1")
+    fun getTonight(): Favorite?
 
     @Query("SELECT * FROM favoriteTable WHERE favoriteNum > 0 ORDER BY favoriteNum ASC")
-    fun getFavorite(): LiveData<List<Favorite>>
+    fun getAllFavorite(): LiveData<List<Favorite>>
 }

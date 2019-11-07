@@ -59,21 +59,21 @@ class CompareFragment : Fragment() {
         if(args.selectCurrency == "EUR"){
             binding.apply {
                 imageChang2.setImageResource(R.drawable.eur)
-                shrotnessCom.setText(R.string.eur)
-                symRe.setText(R.string.symE)
+                shrotnessCom.text = R.string.eur.toString()
+                symRe.text = R.string.symE.toString()
             }
         }else if(args.selectCurrency == "CAD"){
             binding.apply {
                 imageChang2.setImageResource(R.drawable.canada)
-                shrotnessCom.setText(R.string.cad)
-                symRe.setText(R.string.symU)
+                shrotnessCom.text = R.string.cad.toString()
+                symRe.text = R.string.symU.toString()
 
             }
         }else if(args.selectCurrency == "USD") {
             binding.apply {
                 imageChang2.setImageResource(R.drawable.usa)
-                shrotnessCom.setText(R.string.usd)
-                symRe.setText(R.string.symU)
+                shrotnessCom.text = R.string.usd.toString()
+                symRe.text = R.string.symU.toString()
             }
         }
 
@@ -102,16 +102,16 @@ class CompareFragment : Fragment() {
         binding.apply {
             if(shrotnessCom.text.toString() == "USD"){
                 val rs =   String.format("%.4f",input.toInt()*resultCurrency.usd).toDouble()
-                receivedText.setText("$rs")
-                symRe.setText(R.string.symU)
+                receivedText.text = rs.toString()
+                symRe.text = R.string.symU.toString()
             }else if(shrotnessCom.text.toString() == "EUR"){
                 val rs =   String.format("%.4f",input.toInt()*resultCurrency.eur).toDouble()
-                receivedText.setText("$rs")
-                symRe.setText(R.string.symE)
+                receivedText.text = rs.toString()
+                symRe.text = R.string.symE.toString()
             }else if(shrotnessCom.text.toString() == "CAD"){
                 val rs =   String.format("%.4f",input.toInt()*resultCurrency.cad).toDouble()
-                receivedText.setText("$rs")
-                symRe.setText(R.string.symU)
+                receivedText.text = rs.toString()
+                symRe.text = R.string.symU.toString()
             }
         }
 
