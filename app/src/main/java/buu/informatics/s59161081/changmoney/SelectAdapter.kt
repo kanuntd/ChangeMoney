@@ -1,18 +1,14 @@
-package buu.informatics.s59161081.changmoney.Compare
+package buu.informatics.s59161081.changmoney
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.constraintlayout.widget.Constraints
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import buu.informatics.s59161081.changmoney.R
 import buu.informatics.s59161081.changmoney.database.Currency
 
 class SelectAdapter(f : Fragment) : RecyclerView.Adapter<SelectAdapter.ViewHolder>() {

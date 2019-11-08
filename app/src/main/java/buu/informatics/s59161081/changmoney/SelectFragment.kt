@@ -1,4 +1,4 @@
-package buu.informatics.s59161081.changmoney.Compare
+package buu.informatics.s59161081.changmoney
 
 
 import android.os.Bundle
@@ -6,10 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
-import androidx.navigation.fragment.findNavController
-import buu.informatics.s59161081.changmoney.R
 import buu.informatics.s59161081.changmoney.databinding.FragmentSelectBinding
 
 /**
