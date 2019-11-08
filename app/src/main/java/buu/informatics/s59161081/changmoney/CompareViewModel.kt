@@ -6,7 +6,7 @@ import buu.informatics.s59161081.changmoney.database.ResultCurrency
 class CompareViewModel : ViewModel(){
     var rs = 0.00
     var sym = "$"
-    var name = ""
+    var name = "USD"
     fun getValue(paidEdit : String ,currency : String){
         var input = paidEdit
         var resultCurrency  = ResultCurrency()

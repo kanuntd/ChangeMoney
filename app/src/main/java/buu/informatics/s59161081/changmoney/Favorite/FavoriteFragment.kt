@@ -33,7 +33,7 @@ class FavoriteFragment : Fragment() {
         }
 
         val myWebView: WebView = binding.chartWeb
-        myWebView.loadUrl("https://th.investing.com/currencies/single-currency-crosses")
+        myWebView.loadUrl("https://couponbangsean.netlify.com/")
 
 
         return binding.root
