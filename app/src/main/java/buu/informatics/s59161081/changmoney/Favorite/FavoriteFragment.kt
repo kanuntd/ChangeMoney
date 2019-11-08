@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.WebView
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
@@ -31,8 +32,8 @@ class FavoriteFragment : Fragment() {
             view.findNavController().navigate(R.id.action_favoriteFragment_to_converterFragment)
         }
 
-        val adapter = FavoriteAdapter()
-        binding.favoriteList.adapter = adapter
+        val myWebView: WebView = binding.chartWeb
+        myWebView.loadUrl("https://th.investing.com/currencies/single-currency-crosses")
 
 
         return binding.root
