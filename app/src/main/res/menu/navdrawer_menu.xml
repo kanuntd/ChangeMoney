@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/compare_nav"
+        android:id="@+id/compareFragment"/>
+    <item android:title="@string/converter_nav"
+        android:id="@+id/converterFragment"/>
+    <item android:title="@string/favorite_nav"
+        android:id="@+id/favoriteFragment"/>
+</menu>

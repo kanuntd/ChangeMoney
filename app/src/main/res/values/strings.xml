@@ -6,7 +6,7 @@
     <string name="converter">ⓢ \n
         Converter</string>
     <string name="compare">% \n Compare</string>
-    <string name="favorite">♡ \n Our app</string>
+    <string name="favorite">♡ \n Our App</string>
     <string name="thb">THB</string>
     <string name="usd">USD</string>
     <string name="cad">CAD</string>
@@ -26,4 +26,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="symE">€</string>
     <string name="zero">0.0000</string>
+    <string name="compare_nav">Compare</string>
+    <string name="converter_nav">Converter</string>
+    <string name="favorite_nav">Our App</string>
 </resources>
